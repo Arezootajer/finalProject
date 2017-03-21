@@ -1,10 +1,13 @@
 $(document).ready(function() {
+	
 	// youtube key
     var apiKey = "AIzaSyAGlrgn7TPlpZMhX5rEXyLTPtX5boTIKA8";
 
     function displayRecipeVideo() {
-		recipeInput = "beef lasagna";
-		var queryURL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAGlrgn7TPlpZMhX5rEXyLTPtX5boTIKA8&part=snippet&maxResults=3&type=video&videoEmbeddable=true&q=recipe " + recipeInput + "&alt=json";               
+		
+		recipeInput = "hacienda ham scrambler";
+		
+		var queryURL = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&part=snippet&maxResults=3&type=video&videoEmbeddable=true&q=food recipe " + recipeInput + "&alt=json";               
 		
 		$.ajax({
 			url: queryURL,
@@ -16,12 +19,13 @@ $(document).ready(function() {
 			console.log(queryURL);
 			
 			for (i = 0; i < response.items.length; i++) {
-				
+				// 3 Divs for videos
 				var videoDiv = $("<div>");
 
+				// Title of the Video
 				var videoTitle = response.items[i].snippet.title;
 				var p = $("<p>").text(videoTitle);
-
+				// Video player
 				var videoId = response.items[i].id.videoId;
 				var videoPlayer = $("<iframe>");
 				videoPlayer.attr("src", "https://www.youtube.com/embed/" + response.items[i].id.videoId +"?autoplay=0");
