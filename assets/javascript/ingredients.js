@@ -37,6 +37,7 @@ $("#itemSubmitButton").on("click", function(event) {
 });
 
 
+
 database.ref().on("child_added", function(snapshot) {
 
   // Log everything that's coming out of snapshot
@@ -51,30 +52,7 @@ database.ref().on("child_added", function(snapshot) {
  var currentDate = snapshot.val().currentDate;
  var expiryDate = snapshot.val().expiryDate;
 
- //var startTime = snapshot.val().trainTime;
  
-
-  //var viewTime = moment(startTime, "hh:mm a");
-
-  
-  //var minutesTime = moment().diff(viewTime, "minutes");
-
-  
-  //var minutesMod = minutesTime % trainFrequency;
-
-   
-  //var minutesAway = trainFrequency - minutesMod;
-
-  
-
-  //var nextTrainTime = moment().add(minutesAway, "minutes").format("LT");
-
-  
-  
-
-
-  // var trainTime = snapshot.val().trainTime;
-  // var frequency = snapshot.val().frequency;
 
   var ingredientsArray = [itemName, itemQuantity, currentDate, expiryDate];
 
