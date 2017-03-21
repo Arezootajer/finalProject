@@ -41,7 +41,7 @@
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Ingredients List</h3>
+          <h3 class="panel-title">Items List</h3>
         </div>
 
         <div class="panel-body">
@@ -54,10 +54,6 @@
               <th>Expiry Date</th>
               
             </tr>
-
-            
-
-
             </thead>
 
             <tbody id="ingredientsTable"></tbody>
@@ -71,7 +67,7 @@
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Add Inredient</h3>
+          <h3 class="panel-title">Add Item</h3>
         </div>
 
         <div class="panel-body">
@@ -86,13 +82,13 @@
               <input type="text" class="form-control" id="itemQuantity">
             </div>
              <div class="form-group">
-                <label for="currentDate">Current Date (DD/MM/YY - ex:18/03/17)</label>
-                <input type="text" class="form-control" id="currentDate">
+                <label for="currentDate">Current Date (ex:18/03/17)</label>
+                <input type="date" class="form-control" id="currentDate">
               </div>
 
               <div class="form-group">
-                <label for="expiryDate">Expiry Date (DD/MM/YY - ex:21/03/17)</label>
-                <input type="text" class="form-control" id="expiryDate">
+                <label for="expiryDate">Expiry Date (ex:21/03/17)</label>
+                <input type="date" class="form-control" id="expiryDate">
               </div>
 
             <button type="submit" class="btn btn-primary" id="itemSubmitButton">Item Submit</button>
@@ -106,6 +102,8 @@
   <div class="col-sm-2"></div>
 
 </div> 
+
+
 
 
 <script src="assets/javascript/ingredients.js"></script>
